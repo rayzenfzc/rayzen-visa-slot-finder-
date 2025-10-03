@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAYT-FASTTRACK FINDER | Your WhatsApp Visa Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Cormorant Garamond', serif;
+        background-color: #0c0a09; /* Dark background */
+        overflow-x: hidden;
+        font-weight: 600;
+      }
+      html[dir="rtl"] body {
+        font-family: 'Tajawal', sans-serif;
+        font-weight: normal;
+      }
+      .gradient-bg {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: radial-gradient(circle at 10% 20%, rgb(89, 4, 184) 0%, rgba(0, 0, 0, 0) 25%),
+                    radial-gradient(circle at 80% 20%, rgb(2, 114, 187) 0%, rgba(0, 0, 0, 0) 25%),
+                    radial-gradient(circle at 50% 80%, rgb(188, 7, 142) 0%, rgba(0, 0, 0, 0) 25%);
+        animation: gradient-animation 20s ease infinite;
+        opacity: 0.3;
+      }
+      @keyframes gradient-animation {
+        0% { transform: scale(1) rotate(0deg); }
+        50% { transform: scale(1.2) rotate(180deg); }
+        100% { transform: scale(1) rotate(360deg); }
+      }
+      .glass-card {
+        background: rgba(17, 24, 39, 0.2); /* Semi-transparent dark bg */
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 1.5rem; /* 24px */
+      }
+      .dark .glass-card {
+        background: rgba(17, 24, 39, 0.3);
+      }
+      .gradient-text {
+        background: linear-gradient(90deg, #818cf8, #c084fc, #f472b6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+      .form-input {
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      .slide-in-bottom-right {
+        animation: slide-in-bottom-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      }
+      .slide-out-bottom-right {
+        animation: slide-out-bottom-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+      }
+      @keyframes slide-in-bottom-right {
+        0% { transform: translateY(100px) translateX(100px); opacity: 0; }
+        100% { transform: translateY(0) translateX(0); opacity: 1; }
+      }
+      html[dir="rtl"] .slide-in-bottom-right {
+        animation: slide-in-bottom-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      }
+      html[dir="rtl"] .slide-out-bottom-right {
+        animation: slide-out-bottom-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+      }
+      @keyframes slide-in-bottom-left {
+        0% { transform: translateY(100px) translateX(-100px); opacity: 0; }
+        100% { transform: translateY(0) translateX(0); opacity: 1; }
+      }
+      @keyframes slide-out-bottom-right {
+        0% { transform: translateY(0) translateX(0); opacity: 1; }
+        100% { transform: translateY(100px) translateX(100px); opacity: 0; }
+      }
+       @keyframes slide-out-bottom-left {
+        0% { transform: translateY(0) translateX(0); opacity: 1; }
+        100% { transform: translateY(100px) translateX(-100px); opacity: 0; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
